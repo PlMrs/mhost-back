@@ -7,6 +7,7 @@ import { SwipeModule } from './swipe/swipe.module';
 import { EventsGateway } from './gateway/events.gateway';
 import { MessagesModule } from './messages/messages.module';
 import { PlanningModule } from './planning/planning.module';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [ConfigModule.forRoot({
@@ -21,7 +22,7 @@ import { PlanningModule } from './planning/planning.module';
     autoLoadEntities: true,
     synchronize: true
   }),UsersModule, AuthModule, SwipeModule, MessagesModule, PlanningModule],
-  controllers: [],
+  controllers: [AppController],
   providers: [EventsGateway],
 })
 export class AppModule {}
