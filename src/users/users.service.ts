@@ -1,6 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { unlinkSync } from 'fs';
 import { Swipe } from 'src/swipe/entities/swipe.entity';
 import { In, IsNull, Not, Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -85,7 +84,7 @@ export class UsersService {
   }
 
   deletePicture(picture: string) {
-    if (picture === "default.jpg") {
+   /* if (picture === "default.jpg") {
       return;
     }
 
@@ -96,7 +95,8 @@ export class UsersService {
       return 200
     } catch (e) {
       console.log(e)
-    }
+    }*/
+    return 200
   }
 
   findNotVerified() {
